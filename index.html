@@ -1,0 +1,751 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="nencheff">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IQ Store - Additional Task</title>
+    <link rel="stylesheet" href="slick/slick.css" />
+    <link rel="stylesheet" href="slick/slick-theme.css" />
+    <link href="css/branding.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/functions.min.js"></script>
+    <!--<script src="js/functions.js"></script>-->
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="upper_container">
+                <div class="outer_container">
+                    <div class="inner_container header_list">
+                        <ul class="top_menu_auth">
+                            <li class="phone">
+                                <a href="tel:18005551234"> <span>1-800-555-1234</span></a>
+                            </li>
+                            <li class="store_locator">
+                                <a href="#"> <span>Store Locator</span></a>
+                            </li>
+                            <li class="newsletter">
+                                <a href="#"><span>Newsletter Sign Up</span></a>
+                            </li>
+                        </ul>
+                        <ul class="top_menu_auth_right clearfix">
+                            <li class="user">
+                                <a href="#">Hello, Thomas (<span>Sign In</span>)</a>
+                                <div class="header_dropdown">
+                                    <p>SIGN IN</p>
+                                    <div class="user_sign">
+                                        <p>RETURNING CUSTOMER</p>
+                                        <p>Please sign in with your username and password here</p>
+                                        <form id="sign" action="#" method="POST">
+                                            <fieldset>
+                                                <legend>Email address<sup>*</sup></legend>
+                                                <input type="email" id="user_email" required />
+                                            </fieldset>
+                                            <fieldset>
+                                                <legend>Password<sup>*</sup></legend>
+                                                <input type="password" id="user_password" required />
+                                            </fieldset>
+                                            <fieldset>
+                                                <input id="remember_me" class="css-checkbox" type="checkbox" checked>
+                                                <label class="lite-green-check" for="remember_me">Remember Me</label>
+                                            </fieldset>
+                                            <button type="submit">Sign In</button>
+                                            <a href="#">Forgot Password?</a>
+                                        </form>
+                                    </div>
+                                    <div class="user_create">
+                                        <p>NEW CUSTOMER</p>
+                                        <p>Become a member now. It's quick and simple.</p>
+                                        <a href="#">Create Account</a>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="whishlist">
+                                <a href="#"><span>Wish List</span></a>
+                                <div class="header_dropdown">
+                                    <a href="#"><p>CEATE A WISH LIST</p></a>
+                                    <ul>
+                                        <li>Wedding Registry</li>
+                                        <li>Baby Registry</li>
+                                        <li>Kid's Birthdays</li>
+                                        <li>Friends & Family Gifting </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="language">
+                                <a href="#"><span>Language</span></a>
+                                <div class="header_dropdown">
+                                    <p>LANGUAGE & CURRENCY SELECTION</p>
+                                    <div>
+                                        <form id="lang_currency" action="#" method="POST">
+                                            <fieldset>
+                                                <legend>Language:</legend>
+                                                <select>
+                                                    <option value="United States English">United States English</option>
+                                                </select>
+                                            </fieldset>
+                                            <fieldset>
+                                                <legend>Currency:</legend>
+                                                <select>
+                                                    <option value="US Dollar">US Dollar</option>
+                                                </select>
+                                            </fieldset>
+                                            <fieldset>
+                                                <legend></legend>
+                                                <button type="submit">Apply</button>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="outer_container">
+                <div class="inner_container middle_container">
+                    <h1>
+                        <a href="index.html"><img src="images/logo.png" alt="IQ Store" /></a>
+                    </h1>
+                    <div class="search_wrapper">
+                        <form id="search" action="#" method="get">
+                            <span class="search_back expand"><i class="fa fa-search"></i></span>
+                            <input type="text" id="search-box-input" autocomplete="off" name="q" value="" placeholder="">
+                            <button class="hidden" type="submit"></button>
+                            <div id="result">
+                                <div class="suggested_keywords">
+                                    <div>
+                                        <p>SUGGESTED KEYWORDS</p>
+                                        <ul class="keywords_list"></ul>
+                                    </div>
+                                </div>
+                                <div class="suggested_cats_articles">
+                                    <div>
+                                        <p>CATEGORY</p>
+                                        <ul class="category_list"></ul>
+                                    </div>
+                                    <div>
+                                        <p>ARTICLES</p>
+                                        <ul class="article_list"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <a href="#" class="btn-clear-search"></a>
+
+                    </div>
+                    <div class="shopping_bag">
+                        <div class="icon_bag clearfix">
+                            <span class="mob_item_nmbr">4</span>
+                        </div>
+                        <a class="bag_info" href="#">
+                            <div class="bag_title">SHOPPING BAG:</div>
+                            <div class="subtotal">Subtotal: $0.00</div>
+                            <div class="total_items">Cart: 0 item(s)</div>
+                        </a>
+                        <div class="bag_total">
+                            <button type="button"></button>
+                            <div class="bag_row bag_item clearfix">
+                                <div>
+                                    <figure>
+                                        <img src="media/slide_4.png" alt="Linen cotton blend dress" title="Linen cotton blend dress" />
+                                    </figure>
+                                </div>
+                                <div class="bag_item_info">
+                                    <div class="bag_item_description">
+                                        <p class="bag_item_title"><a href="#">Linen cotton blend dress</a></p>
+                                        <p class="bag_item_color">Color: Red</p>
+                                    </div>
+                                    <div class="clearfix">
+                                        <span>QTY: 1</span>
+                                        <span>$<span class="bag_item_price">34.<sup>99</sup></span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bag_row bag_item clearfix">
+                                <div>
+                                    <figure>
+                                        <img src="media/slide_3.png" alt="Swiss embroidery cotton dress" title="Swiss embroidery cotton dress" />
+                                    </figure>
+                                </div>
+                                <div class="bag_item_info">
+                                    <div class="bag_item_description">
+                                        <p class="bag_item_title">
+                                            <a href="#">Swiss embroidery cotton dress</a>
+                                        </p>
+                                        <p class="bag_item_color">Color: Black</p>
+                                    </div>
+                                    <div class="clearfix">
+                                        <span>QTY: 1</span>
+                                        <span>$<span class="bag_item_price">39.<sup>90</sup></span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bag_row bag_item clearfix">
+                                <div>
+                                    <figure>
+                                        <img src="media/slide_4.png" alt="Linen cotton blend dress" title="Linen cotton blend dress" />
+                                    </figure>
+                                </div>
+                                <div class="bag_item_info">
+                                    <div class="bag_item_description">
+                                        <p class="bag_item_title"><a href="#">Linen cotton blend dress</a></p>
+                                        <p class="bag_item_color">Color: Red</p>
+                                    </div>
+                                    <div class="clearfix">
+                                        <span>QTY: 1</span>
+                                        <span>$<span class="bag_item_price">34.<sup>99</sup></span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bag_row">
+                                <a class="view_more" href="#">view more items</a>
+                            </div>
+                            <div class="bag_row item_discount">
+                                <p>
+                                    <span class="clearfix">Get 75% off any dress!</span>
+                                    <span>- $<span class="item_discount_price">15.<sup>00</sup></span></span>
+                                </p>
+                            </div>
+                            <div class="bag_row all_orders_discount">
+                                <p>
+                                    <span class="clearfix">Save 10% on all orders</span>
+                                    <span>- $<span class="item_discount_price">7.<sup>00</sup></span></span>
+                                </p>
+                            </div>
+                            <div class="bag_row bag_total_count">
+                                <p class="clearfix">
+                                    <span class="clearfix">SUBTOTAL FOR <span class="total_count_items">2</span>ITEM(S)</span>
+                                    <span>$<span class="bag_item_price">39.<sup>90</sup></span></span>
+                                </p>
+                            </div>
+                            <div class="bag_row go_to_bag">
+                                <a href="#">Go to bag</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile_wrapper">
+                <a class="navbar-toggle">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="mobile_menu">
+                    <nav>
+                        <div class="outer_container">
+                            <div class="inner_container clearfix">
+                                <ul class="main_cats">
+                                    <li class="clearfix">
+                                        <a href="#">NEW ARRIVALS</a>
+                                        <span class="mobile_arrow"></span>
+                                        <div class="dropdown">
+                                            <section class="collections">
+                                                <div>
+                                                    <div class="new_arrivals_section">
+                                                        <a class="bm_menu" href="#">Main Menu</a>
+                                                        <ul class="section_cats">
+                                                            <li><a href="#">Dresses</a></li>
+                                                            <li><a href="#">Tops</a></li>
+                                                            <li><a href="#">Shirt</a></li>
+                                                            <li><a href="#">Jeans</a></li>
+                                                        </ul>
+                                                        <ul class="section_cats">
+                                                            <li><a href="#">Leggings</a></li>
+                                                            <li><a href="#">Trousers</a></li>
+                                                            <li><a href="#">Coats & Jackets</a></li>
+                                                            <li><a href="#">Cardigans and Sweaters</a></li>
+                                                        </ul>
+                                                        <h2>NEW TRF <span>collection</span> 2014</h2>
+                                                    </div>
+                                                    <div id="new_arrivals" class="heading">
+                                                        <div>
+                                                            <p>NEW ARRIVALS 2014</p>
+                                                            <h3>capsule collection<span> accessories</span></h3>
+                                                            <a href="#">More</a>
+                                                        </div>
+                                                        <div class="clearfix">
+                                                            <figure>
+                                                                <img src="images/new_arrivals.png" alt="Capsule collection Accessories" />
+                                                            </figure>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">COLLECTIONS</a>
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">SHOES</a>
+                                        <span class="mobile_arrow"></span>
+                                        <div class="dropdown">
+                                            <section class="collections">
+                                                <div>
+                                                    <div class="collection_section">
+                                                        <a class="bm_menu" href="#">Main Menu</a>
+                                                        <ul class="section_cats">
+                                                            <li><a href="#">Dresses</a></li>
+                                                            <li><a href="#">Tops</a></li>
+                                                            <li><a href="#">Shirt</a></li>
+                                                            <li><a href="#">Jeans</a></li>
+                                                        </ul>
+                                                        <ul class="section_cats">
+                                                            <li><a href="#">Leggings</a></li>
+                                                            <li><a href="#">Trousers</a></li>
+                                                            <li><a href="#">Coats & Jackets</a></li>
+                                                            <li><a href="#">Cardigans and Sweaters</a></li>
+                                                        </ul>
+                                                        <h2>SAVE up to <span>70%</span> on HEELS</h2>
+                                                    </div>
+                                                    <div id="collections" class="heading">
+                                                        <h3>NEW SUMMER FLATS</h3>
+                                                        <figure>
+                                                            <img src="media/flat_1.png" alt="New Summer Flats" />
+                                                            <img src="media/flat_2.png" alt="New Summer Flats" />
+                                                            <img src="media/flat_3.png" alt="New Summer Flats" />
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">BAGS</a>
+                                        <span class="mobile_arrow"></span>
+                                        <div class="dropdown">
+                                            <section class="collections">
+                                                <div>
+                                                    <div class="bags_section">
+                                                        <a class="bm_menu" href="#">Main Menu</a>
+                                                        <ul class="section_cats">
+                                                            <li><a href="#">Dresses</a></li>
+                                                            <li><a href="#">Tops</a></li>
+                                                            <li><a href="#">Shirt</a></li>
+                                                            <li><a href="#">Jeans</a></li>
+                                                        </ul>
+                                                        <ul class="section_cats">
+                                                            <li><a href="#">Leggings</a></li>
+                                                            <li><a href="#">Trousers</a></li>
+                                                            <li><a href="#">Coats & Jackets</a></li>
+                                                            <li><a href="#">Cardigans and Sweaters</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div id="bags" class="heading">
+                                                        <figure>
+                                                            <img src="media/bag_1.png" alt="New Leather Bags" />
+                                                        </figure>
+                                                        <div>
+                                                            <figure>
+                                                                <img src="media/bag_2.png" alt="New Leather Bags" />
+                                                            </figure>
+                                                            <h2>NEW <sup><span>LEATHER</span><span>BAGS</span></sup></h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">LINGERIE</a>
+                                        <span class="mobile_arrow"></span>
+                                        <div class="dropdown">
+                                            <section class="collections">
+                                                <div>
+                                                    <div class="collection_section lingerie_section">
+                                                        <a class="bm_menu" href="#">Main Menu</a>
+                                                        <ul class="section_cats">
+                                                            <li><a href="#">Dresses</a></li>
+                                                            <li><a href="#">Tops</a></li>
+                                                            <li><a href="#">Shirt</a></li>
+                                                            <li><a href="#">Jeans</a></li>
+                                                        </ul>
+                                                        <ul class="section_cats">
+                                                            <li><a href="#">Leggings</a></li>
+                                                            <li><a href="#">Trousers</a></li>
+                                                            <li><a href="#">Coats & Jackets</a></li>
+                                                            <li><a href="#">Cardigans and Sweaters</a></li>
+                                                        </ul>
+                                                        <h2><span>NEW 2014</span> collection bras</h2>
+                                                    </div>
+                                                    <div id="lingerie" class="heading">
+                                                        <figure class="clearfix">
+                                                            <img src="media/lingerie_1.png" alt="New 2014 Collection Bras" />
+                                                        </figure>
+                                                        <h3 class="clearfix"><span>BRAS BASIC</span><span>SALE 50% OFF</span><span>Extreme Push Up</span></h3>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">SWIM</a>
+                                        <span class="mobile_arrow"></span>
+                                        <div class="dropdown">
+                                            <section class="collections">
+                                                <div>
+                                                    <div class="collection_section lingerie_section">
+                                                        <a class="bm_menu" href="#">Main Menu</a>
+                                                        <ul class="section_cats">
+                                                            <li><a href="#">Dresses</a></li>
+                                                            <li><a href="#">Tops</a></li>
+                                                            <li><a href="#">Shirt</a></li>
+                                                            <li><a href="#">Jeans</a></li>
+                                                        </ul>
+                                                        <ul class="section_cats">
+                                                            <li><a href="#">Leggings</a></li>
+                                                            <li><a href="#">Trousers</a></li>
+                                                            <li><a href="#">Coats & Jackets</a></li>
+                                                            <li><a href="#">Cardigans and Sweaters</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div id="swim" class="heading">
+                                                        <figure class="clearfix">
+                                                            <img src="media/swim.png" alt="Swim 2014 island Hopping" />
+                                                        </figure>
+                                                        <div class="heading">
+                                                            <h2 class="clearfix"><span>SWIM 2014</span><span>island hopping</span></h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">ACCESSORIES</a>
+                                        <span class="mobile_arrow"></span>
+                                        <div class="dropdown">
+                                            <section class="collections">
+                                                <div>
+                                                    <div class="collection_section accessories_section">
+                                                        <a class="bm_menu" href="#">Main Menu</a>
+                                                        <ul class="section_cats">
+                                                            <li><a href="#">Dresses</a></li>
+                                                            <li><a href="#">Tops</a></li>
+                                                            <li><a href="#">Shirt</a></li>
+                                                            <li><a href="#">Jeans</a></li>
+                                                        </ul>
+                                                        <ul class="section_cats">
+                                                            <li><a href="#">Leggings</a></li>
+                                                            <li><a href="#">Trousers</a></li>
+                                                            <li><a href="#">Coats & Jackets</a></li>
+                                                            <li><a href="#">Cardigans and Sweaters</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div id="accessories" class="heading">
+                                                        <div>
+                                                            <h2 class="clearfix">ACCESSORIES HOTLIST</h2>
+                                                            <p><span>up to 70% off</span></p>
+                                                            <figure>
+                                                                <img src="media/ring_1.png" alt="ACCESSORIES HOTLIST" />
+                                                                <img src="media/ring_2.png" alt="ACCESSORIES HOTLIST" />
+                                                                <img src="media/ring_3.png" alt="ACCESSORIES HOTLIST" />
+                                                            </figure>
+                                                        </div>
+                                                        <figure class="clearfix">
+                                                            <img src="media/accessories.png" alt="Accessories Summer Collection" />
+                                                            <figcaption>
+                                                                <h3>ACCESSORIES<span>SUMMER COLLECTION</span></h3>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">SALE</a>
+                                        <span class="mobile_arrow"></span>
+                                        <div class="dropdown">
+                                            <section class="collections">
+                                                <div>
+                                                    <div class="collection_section sale_section">
+                                                        <a class="bm_menu" href="#">Main Menu</a>
+                                                        <ul class="section_cats">
+                                                            <li><a href="#">Dresses</a></li>
+                                                            <li><a href="#">Tops</a></li>
+                                                            <li><a href="#">Shirt</a></li>
+                                                            <li><a href="#">Jeans</a></li>
+                                                        </ul>
+                                                        <ul class="section_cats">
+                                                            <li><a href="#">Leggings</a></li>
+                                                            <li><a href="#">Trousers</a></li>
+                                                            <li><a href="#">Coats & Jackets</a></li>
+                                                            <li><a href="#">Cardigans and Sweaters</a></li>
+                                                        </ul>
+                                                        <h2>TOTAL SALE <span>collection</span> 2013</h2>
+                                                    </div>
+                                                    <div id="sale" class="heading">
+                                                        <figure class="clearfix">
+                                                            <img src="media/beanies_1.png" alt="Accessories Summer Collection" />
+                                                            <figcaption>
+                                                                <h3>BEANIES<span>SALE 70%</span></h3>
+                                                            </figcaption>
+                                                        </figure>
+                                                        <div>
+                                                            <h3 class="clearfix">SPECIAL OFFERS</h3>
+                                                            <h4><span>Sale 50% off</span></h4>
+                                                            <figure>
+                                                                <img src="media/sale_1.png" alt="ACCESSORIES HOTLIST" />
+                                                                <img src="media/sale_2.png" alt="ACCESSORIES HOTLIST" />
+                                                                <img src="media/sale_3.png" alt="ACCESSORIES HOTLIST" />
+                                                            </figure>
+                                                            <a href="#">More</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="outer_container mwork">
+            <div class="inner_container services">
+                <div class="save">
+                    <span>SAVE 15% OFF YOUR ENTIRE PURCHASE</span>
+                </div>
+                <div class="free">
+                    <span>FREE SHIPPING ON ORDERS OVER $100</span>
+                </div>
+            </div>
+        </div>
+        <div class="outer_container mwork">
+            <div class="inner_container">
+                <div class="slider clearfix">
+                    <div class="slide clearfix">
+                        <div class="bigger bigger_1 clearfix">
+                            <img src="images/slide_1_1.jpg" alt="Stylish, High-Quality and Shockingly Affordable Tops" />
+                            <div class="banner_header">
+                                <p>Stylish,<span class="high_quality">High-Quality and shockingly </span><span class="affordable">affordable</span></p>
+                                <div>
+                                    <div class="clearfix">
+                                        <p class="slider_price clearfix"><span><span>Tops </span><span>from </span></span><span class="price">19.<sup>90</sup></span></p>
+                                    </div>
+                                    <a class="shop_now" href="#">Shop now <span></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="smaller clearfix">
+                            <div class="top_slide">
+                                <img src="images/slide_1_2.jpg" alt="New Collection" />
+                                <div>
+                                    <h1>NEW<span> Collection</span></h1>
+                                    <a class="shop_now" href="#">Holiday now <span></span></a>
+                                </div>
+                            </div>
+                            <div class="bottom_slide">
+                                <img src="images/slide_1_3.jpg" alt="Accessories Collection" />
+                                <div>
+                                    <p>Accessories<span>Collection</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide b_slide_2 clearfix">
+                        <div class="bigger">
+                            <img src="images/slide_2_1.jpg" alt="Stylish, High-Quality and Shockingly Affordable Tops" />
+                            <div class="banner_header">
+                                <div>
+                                    <div class="keeping">
+                                        <p>SUMMER<span class="high_quality">SALE</span><span class="affordable">50% OFF</span></p>
+                                        <a class="shop_now" href="#">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="outer_container mwork">
+            <div class="inner_container">
+                <div id="new_this_week">
+                    <div class="inner_container">
+                        <h1>NEW THIS WEEK</h1>
+                    </div>
+                    <div class="inner_container">
+                        <div class="new_this_week_slider">
+                            <div class="new_this_week_slide slide_1">
+                                <a href="#">
+                                    <figure>
+                                        <img src="media/slide_1.png" alt="Swiss embroidery cotton dress" />
+                                    </figure>
+                                    <div class="product_info">
+                                        <h2>
+                                            Swiss embroidery cotton dress
+                                        </h2>
+                                        <span class="product_price"><span class="currency">$</span>59.<sup>90</sup></span>
+                                        <span class="discount_price">save: $40.00 (35%)</span><span class="original_price"><span class="discount_currency">$</span>99.99</span>
+                                    </div>
+                                </a>
+                                <div class="product_rating">
+                                    <span class="h_rating h_rating_1"></span><a href="#" title="Customer Rating"><span class="total_rating">4/5 (<span class="rating_count">22</span>)</span></a>
+                                </div>
+                                <span class="on_sale"></span>
+                            </div>
+                            <div class="new_this_week_slide slide_2">
+                                <a href="#">
+                                    <figure>
+                                        <img src="media/slide_2.png" alt="Striped pleated dress" />
+                                    </figure>
+                                    <div class="product_info">
+                                        <h2>
+                                            Striped pleated dress
+                                        </h2>
+                                        <span class="product_price"><span class="currency">$</span>39.<sup>99</sup></span>
+                                        <span class="discount_price">save: $10.00 (10%)</span><span class="original_price"><span class="discount_currency">$</span>49.99</span>
+                                    </div>
+                                </a>
+                                <div class="product_rating">
+                                    <span class="h_rating h_rating_2"></span><a href="#" title="Customer Rating"><span class="total_rating">4/5 (<span class="rating_count">45</span>)</span></a>
+                                </div>
+                                <span class="on_sale"></span>
+                            </div>
+                            <div class="new_this_week_slide slide_3">
+                                <a href="#">
+                                    <figure>
+                                        <img src="media/slide_3.png" alt="Linen cotton blend dress" />
+                                    </figure>
+                                    <div class="product_info">
+                                        <h2>
+                                            Linen cotton blend dress
+                                        </h2>
+                                        <span class="product_price"><span class="currency">$</span>34.<sup>99</sup></span>
+                                        <span class="discount_price">save: $40.00 (35%)</span><span class="original_price"><span class="discount_currency">$</span>59.99</span>
+                                    </div>
+                                </a>
+                                <div class="product_rating">
+                                    <span class="h_rating h_rating_3"></span><a href="#" title="Customer Rating"><span class="total_rating">3/5 (<span class="rating_count">22</span>)</span></a>
+                                </div>
+                                <span class="on_sale"></span>
+                            </div>
+                            <div class="new_this_week_slide slide_4">
+                                <a href="#">
+                                    <figure>
+                                        <img src="media/slide_4.png" alt="Swiss embroidery cotton dress" />
+                                    </figure>
+                                    <div class="product_info">
+                                        <h2>
+                                            Swiss embroidery cotton dress
+                                        </h2>
+                                        <span class="product_price"><span class="currency">$</span>34.<sup>90</sup></span>
+                                    </div>
+                                </a>
+                                <div class="product_rating">
+                                    <span class="h_rating h_rating_4"></span><a href="#" title="Customer Rating"><span class="total_rating">4/5 (<span class="rating_count">45</span>)</span></a>
+                                </div>
+                                <span class="on_sale"></span>
+                            </div>
+                            <div class="new_this_week_slide slide_4">
+                                <a href="#">
+                                    <figure>
+                                        <img src="media/slide_4.png" alt="Swiss embroidery cotton dress" />
+                                    </figure>
+                                    <div class="product_info">
+                                        <h2>
+                                            Swiss embroidery cotton dress
+                                        </h2>
+                                        <span class="product_price"><span class="currency">$</span>34.<sup>90</sup></span>
+                                    </div>
+                                </a>
+                                <div class="product_rating">
+                                    <span class="h_rating h_rating_4"></span><a href="#" title="Customer Rating"><span class="total_rating">4/5 (<span class="rating_count">45</span>)</span></a>
+                                </div>
+                                <span class="on_sale"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="newsletter">
+            <div>
+                <div class="outer_container">
+                    <div class="inner_container">
+                        <h2>SIGN UP FOR EMAIL <span><span>Sign up to our newsletter and keep up to date</span><span>with all the collections and the latest trends.</span></span></h2>
+                        <div class="form_wrapper">
+                            <form action="#" method="post">
+                                <input type="text" id="newsletter_form" />
+                                <button type="submit" value=""></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="outer_container">
+                <div class="inner_container middle_footer clearfix">
+                    <div class="logo_wrapper">
+                        <figure>
+                            <a href="#">
+                                <img src="images/logo.png" alt="IQ Store" />
+                            </a>
+                            <figcaption>
+                                © 2013 IQ.store. All rights reserved.
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="footer_links_wrapper">
+                        <div class="footer_links block_1">
+                            <h5>CUSTOMER SERVICE</h5>
+                            <ul>
+                                <li><a href="#">Help</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Return Policy</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer_links block_2">
+                            <h5>CORPORATE INFO</h5>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Store Locator</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer_links block_3">
+                            <h5>EXPLORE</h5>
+                            <ul>
+                                <li><a href="#">Site Map</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="socials">
+                        <ul>
+                            <li><a href="#" title="Follow Us on Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" title="Follow Us on Twitter" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" title="Follow Us on Twitter" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="back-to-top"></a>
+                </div>
+            </div>
+            
+        </footer>
+    </div>
+    <div id="newsletter_popup">
+        <section class="news_wrapper clearfix">
+            <div class="clearfix">
+                <h1>Yes, <span>sign me up</span></h1>
+                <h2>If you want to receive our email updates on new products, special events and offers just enter your Email:</h2>
+                <form action="#" method="POST">
+                    <input type="email" placeholder="Your email address" />
+                    <button type="submit">Sign Up</button>
+                    <a href="#">No Thank You</a>
+                </form>
+            </div>
+            <button type="button" class="close"></button>
+        </section>
+    </div>
+</body>
+</html>
